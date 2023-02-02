@@ -26,7 +26,6 @@ class Login extends React.Component {
 
   render() {
     const { email, password } = this.state;
-    console.log(this.props);
     const numberValidate = 5;
     const verification = email
       .includes('@') && email.includes('.com') && password.length > numberValidate;

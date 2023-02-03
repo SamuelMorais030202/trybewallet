@@ -17,3 +17,9 @@ export const actionSaveExpenses = (expense) => ({
   type: 'ACTION_EXPENSE',
   payload: expense,
 });
+
+export const addExpenses = (addState) => (dispatch) => fetch('https://economia.awesomeapi.com.br/json/all')
+  .then((response) => response.json())
+  .then((currencys) => dispatch(actionSaveExpenses(
+    { ...addState, exchangeRates: currencys },
+  )));

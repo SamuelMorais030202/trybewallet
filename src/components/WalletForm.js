@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import { fetchExpenses, actionSaveExpenses } from '../redux/actions';
+import { fetchExpenses, addExpenses } from '../redux/actions';
 
 class WalletForm extends Component {
   state = {
-    value: 0,
+    value: '',
     description: '',
     currency: 'USD',
     method: 'Dinheiro',
-    category: 'Alimentação',
+    id: 0,
+    tag: 'Alimentação',
   };
 
   componentDidMount() {
@@ -26,16 +27,19 @@ class WalletForm extends Component {
   };
 
   saveExpense = () => {
-    const { value, description, currency, method, category } = this.state;
+    this.setState((prevState) => ({
+      id: prevState.id + 1,
+    }));
     const { dispatch } = this.props;
-    const obj = {
-      value,
-      description,
-      currency,
-      method,
-      tag: category,
-    };
-    dispatch(actionSaveExpenses(obj));
+    // Chamar uma função para controlar a action
+    dispatch(addExpenses(this.state));
+    this.setState({
+      value: '',
+      description: '',
+      currency: 'USD',
+      method: 'Dinheiro',
+      tag: 'Alimentação',
+    });
   };
 
   render() {
@@ -101,7 +105,7 @@ class WalletForm extends Component {
         <label htmlFor="category">
           Categoria da despesa:
           <select
-            name="category"
+            name="tag"
             id="category"
             onChange={ this.handleChange }
             data-testid="tag-input"

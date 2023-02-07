@@ -23,3 +23,9 @@ export const addExpenses = (addState) => (dispatch) => fetch('https://economia.a
   .then((currencys) => dispatch(actionSaveExpenses(
     { ...addState, exchangeRates: currencys },
   )));
+
+// Action de delete
+export const deletExpense = (idExpense) => ({
+  type: 'DELETE_EXPENSE',
+  payload: idExpense,
+});

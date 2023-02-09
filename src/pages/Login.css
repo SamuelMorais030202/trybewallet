@@ -8,6 +8,7 @@
   background-color: #2FC18C;
   background-image: url('../fundo.png');
   background-size: cover;
+  background-position: center;
 
   display: flex;
   align-items: center;

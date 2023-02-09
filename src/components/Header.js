@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
+import logo from '../logo.png';
+import vector from '../vector.png';
+import user from '../user.png';
+
 class Header extends Component {
   render() {
     const { email, expenses } = this.props;
@@ -12,11 +16,22 @@ class Header extends Component {
     // console.log(sumExpenses);
     return (
       <header>
-        <h1>Header wallet</h1>
-        <p data-testid="email-field">{ email }</p>
-        <p>
-          <span data-testid="total-field">{sumExpenses}</span>
+        <h1>
+          {' '}
+          <img src={ logo } alt="logo-trybe" />
+        </h1>
+        <p className="expense">
+          <img src={ vector } alt="Vector imagem" />
+          Total de despesas:
+          <span data-testid="total-field">
+            {sumExpenses}
+          </span>
           <span data-testid="header-currency-field">BRL</span>
+        </p>
+        <p data-testid="email-field" className="email-user">
+          <img src={ user } alt="Imageuser" />
+          { ' ' }
+          { email }
         </p>
       </header>
     );

@@ -1,0 +1,51 @@
+.table {
+  width: 1040px;
+  height: 129px;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.table thead {
+  width: 1035.38px;
+  height: 53.2px;
+  color: white;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 13px;
+}
+
+.table thead th {
+  width: 110.93px;
+  height: 26.6px;
+}
+
+.table tbody {
+  width: 998.69px;
+  height: 67.52px;
+}
+
+.table tbody td {
+  width: 110.93px;
+  height: 26.6px;
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 13px;
+
+  color: #2FC18C;
+}
+
+.table tr {
+  margin-bottom: 10px;
+}
+
+.table img {
+  margin: 5px;
+}
+
+td {
+  text-align: center;
+}

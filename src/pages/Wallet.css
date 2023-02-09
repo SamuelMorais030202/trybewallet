@@ -1,0 +1,79 @@
+.main-wallet {
+  width: 100vw;
+  height: 100vh;
+  background-color: #2FC18C;
+  background-image: url('../fundo.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+}
+
+.header-form {
+  margin-top: -25px;
+  position: absolute;
+  background-color: white;
+  width: 75%;
+  height: 250px;
+  padding: 10px;
+  box-shadow: -4px 9px 13px rgba(5, 18, 54, 0.4);
+  border-radius: 10px;
+}
+
+.header-form header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+}
+
+.header-form header p {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.expense {
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 14px;
+
+  color: #003BE5;
+}
+
+.expense span {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.email-user {
+  font-family: 'Epilogue';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+
+  color: #2FC18C;
+}
+
+.header-form header img {
+  max-width: 200px;
+}
+
+.table-wallet {
+  position: relative;
+  top: 250px;
+  background-color: #0039e5;
+  box-shadow: -4px 9px 13px rgba(3, 107, 82, 0.3);
+  border-radius: 10px;
+  width: 85%;
+  height: 250px;
+  margin-top: -20px;
+}

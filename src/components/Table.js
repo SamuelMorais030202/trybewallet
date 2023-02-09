@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { deletExpense, editExpense } from '../redux/actions';
 
+import './Table.css';
+
 class Table extends Component {
   render() {
     const { expenses, dispatch } = this.props;

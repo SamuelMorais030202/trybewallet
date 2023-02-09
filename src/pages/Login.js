@@ -33,7 +33,7 @@ class Login extends React.Component {
       .includes('@') && email.includes('.com') && password.length > numberValidate;
     return (
       <div className="main-form">
-        <div className="form">
+        <div className="form-login">
           <h1>
             {' '}
             <img src={ logo } alt="logo" />

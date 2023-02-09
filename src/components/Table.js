@@ -4,13 +4,15 @@ import PropTypes from 'prop-types';
 import { deletExpense, editExpense } from '../redux/actions';
 
 import './Table.css';
+import edit from '../edit.png';
+import delect from '../delect.png';
 
 class Table extends Component {
   render() {
     const { expenses, dispatch } = this.props;
     return (
       <div className="table-wallet">
-        <table>
+        <table className="table">
           <thead>
             <th>Tag</th>
             <th>Descrição</th>
@@ -20,7 +22,7 @@ class Table extends Component {
             <th>Câmbio utilizado</th>
             <th>Valor convertido</th>
             <th>Moeda de conversão</th>
-            <th>Editar/Excluir</th>
+            <th>Editar / Excluir</th>
           </thead>
           <tbody>
             {
@@ -28,7 +30,7 @@ class Table extends Component {
                 const { exchangeRates } = expense;
                 return (
                   <tr key={ expense.id }>
-                    <td>{expense.tag}</td>
+                    <td>{ expense.tag }</td>
                     <td>{expense.description}</td>
                     <td>{expense.method}</td>
                     <td>{Number(expense.value).toFixed(2)}</td>
@@ -43,19 +45,24 @@ class Table extends Component {
                     </td>
                     <td>BRL</td>
                     <td>
-                      <button
+                      <img
+                        className="test"
+                        src={ edit }
+                        alt="imageedit"
+                        onClick={ () => dispatch(editExpense(expense.id)) }
+                      />
+                      {/* <button
+                        className="butn-edit"
                         data-testid="edit-btn"
                         onClick={ () => dispatch(editExpense(expense.id)) }
                       >
-                        Editar
-                      </button>
-                      /
-                      <button
-                        data-testid="delete-btn"
+                        <img src={ edit } alt="imageedit" />
+                      </button> */}
+                      <img
+                        src={ delect }
+                        alt="imagedelet"
                         onClick={ () => dispatch(deletExpense(expense.id)) }
-                      >
-                        Excluir
-                      </button>
+                      />
                     </td>
                   </tr>
                 );

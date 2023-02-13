@@ -12,12 +12,11 @@
 }
 
 .header-form {
-  margin-top: -25px;
+  margin-top: -20px;
   position: absolute;
   background-color: white;
-  width: 75%;
+  width: 70%;
   height: 250px;
-  padding: 10px;
   box-shadow: -4px 9px 13px rgba(5, 18, 54, 0.4);
   border-radius: 10px;
 }
@@ -73,7 +72,93 @@
   background-color: #0039e5;
   box-shadow: -4px 9px 13px rgba(3, 107, 82, 0.3);
   border-radius: 10px;
-  width: 85%;
+  width: 80%;
   height: 250px;
-  margin-top: -20px;
+  margin-top: -28px;
+}
+
+@media screen and (max-width: 950px) {
+  .header-form {
+    width: 90vw;
+    padding: 2px;
+    height: 300px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .campos-form {
+    height: 158px;
+  }
+
+  .table-wallet {
+    margin-top: 60px;
+    width: 99vw;
+    height: 225px;
+    padding: 1px;
+  }
+
+  .header-form {
+    margin-bottom: 20px;
+  }
+
+  .header-form header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+  }
+
+  .header-form header img {
+    max-width: 100px;
+  }
+
+  .form {
+    height: 300px;
+  }
+
+  .form button {
+    margin-bottom: 10px;
+  }
+
+  .table {
+    width: 400px;
+  }
+
+  .table thead {
+    width: 70%;
+    height: 10px;
+    margin-left: 5px;
+    padding: 10px;
+    color: white;
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 10px;
+  }
+
+  .table thead th {
+    width: 30px;
+    height: 26.6px;
+    margin: 1px;
+  }
+  
+  .table tbody {
+    width: 90%;
+    height: 20.52px;
+  }
+
+  .table tbody td {
+    width: 30px;
+    height: 23.6px;
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 10px;
+  
+    color: #2FC18C;
+  }
 }

@@ -19,9 +19,12 @@
   background-color: white;
   padding: 40px;
   border-radius: 15px;
+  width: 350px;
+  height: 200px;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 4px;
 }
 
@@ -43,7 +46,40 @@
   font-family: cursive;
 }
 
-.form-login button {
+.form-login input:hover {
+  width: 310px;
+  height: 22px;
+}
+
+.habilit {
+  margin-top: 10px;
+  background: #0039e5;
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+  width: 315px;
+  height: 35px;
+  color: white;
+  font-size: 16px;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+
+.desabilit {
+  margin-top: 10px;
+  background: #0039e58e;
+  border: 1px solid #003BE5;
+  border-radius: 5px;
+  width: 315px;
+  height: 35px;
+  color: white;
+  font-size: 16px;
+
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 600;
+}
+
+/* .form-login button {
   margin-top: 10px;
   background: #003BE5;
   border: 1px solid #003BE5;
@@ -55,4 +91,9 @@
 
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-weight: 600;
+} */
+
+.form-login button:hover {
+  width: 318px;
+  height: 42px;
 }

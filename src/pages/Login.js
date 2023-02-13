@@ -55,6 +55,7 @@ class Login extends React.Component {
             placeholder="Senha"
           />
           <button
+            className={ verification === true ? 'habilit' : 'desabilit' }
             onClick={ this.handleClick }
             disabled={ !verification }
           >
